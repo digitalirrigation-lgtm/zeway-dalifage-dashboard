@@ -29,7 +29,7 @@ translations = {
         "et_title": "💧 ዕለታዊ እና ሳምንታዊ የውሃ ትነት (Evapotranspiration) መገለጫ",
         "et_evap": "ዕለታዊ የአፈር ውሃ ትነት ማጣት:",
         "et_need": "የሰብሉ የተጣራ የውሃ ፍላጎት መጠን:",
-        "map_title": "🗺️ የቀጥታ የካርታ ዞን: የሰብልውሃ ይዘት መከታተያ",
+        "map_title": "🗺️ የቀጥታ የካርታ ዞን: የሰብል ውሃ ይዘት መከታተያ",
         "legend_healthy": "🔷 ሰማያዊ ዞን: በቂ የውሃ ክምችት ያለው አፈር (ጥሩ)",
         "legend_dry": "🔶 ብርቱካናማ ዞን: ከፍተኛ የውሃ እጥረት (አስቸኳይ መስኖ ይፈልጋል)",
         "pie_title": "🍕 የእርሻው አጠቃላይ የውሃ ስርጭት ድርሻ (ፓይ ቻርት)",
@@ -82,10 +82,9 @@ layout_col1, layout_col2 = st.columns(2)
 with layout_col1:
     st.markdown(f"#### {text['pie_title']}")
     
-    # Fully dynamic pie chart illustrating spatial moisture breakdown ratios
     labels = ['Adequate Moisture (Alpha)', 'Moisture Deficit (Beta)', 'High Heat Runoff']
     sizes = [45.0, 35.0, 20.0]
-    chart_colors = ['#2ecc71', '#e67e22', '#e74c3c'] # Green, Orange, Red distinct matrix
+    chart_colors = ['#2ecc71', '#e67e22', '#e74c3c']
     
     fig, ax = plt.subplots(figsize=(5, 4))
     ax.pie(sizes, labels=labels, colors=chart_colors, autopct='%1.1f%%', startangle=140, textprops={'fontsize': 8})
@@ -98,7 +97,6 @@ with layout_col2:
     dalifage_lat, dalifage_lon = 10.6254, 40.3154
     dalifage_map = folium.Map(location=[dalifage_lat, dalifage_lon], zoom_start=14, tiles="OpenStreetMap")
     
-    # Custom colored grid geometry arrays showing true multi-color variance to catch attention
     folium.Rectangle(bounds=[[10.621, 40.311], [10.625, 40.316]], color="#2980b9", weight=3, fill=True, fill_color="#2980b9", fill_opacity=0.4, popup="Zone Alpha-1").add_to(dalifage_map)
     folium.Rectangle(bounds=[[10.625, 40.311], [10.629, 40.316]], color="#d35400", weight=3, fill=True, fill_color="#d35400", fill_opacity=0.4, popup="Zone Beta-1").add_to(dalifage_map)
     folium.Rectangle(bounds=[[10.621, 40.316], [10.625, 40.321]], color="#2980b9", weight=3, fill=True, fill_color="#2980b9", fill_opacity=0.4, popup="Zone Alpha-2").add_to(dalifage_map)
@@ -115,7 +113,6 @@ data_col1, data_col2 = st.columns(2)
 with data_col1:
     st.markdown(f"#### {text['weekly_title']}")
     
-    # Table arrays capturing absolute weekly synoptic meteorology data variables
     weekly_matrix = {
         "Day of Week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         "Air Temp (°C)":,
