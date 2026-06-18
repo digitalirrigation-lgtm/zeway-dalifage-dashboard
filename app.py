@@ -84,7 +84,7 @@ with layout_col1:
     
     # Fully dynamic pie chart illustrating spatial moisture breakdown ratios
     labels = ['Adequate Moisture (Alpha)', 'Moisture Deficit (Beta)', 'High Heat Runoff']
-    sizes = [45, 35, 20]
+    sizes = [45.0, 35.0, 20.0]
     chart_colors = ['#2ecc71', '#e67e22', '#e74c3c'] # Green, Orange, Red distinct matrix
     
     fig, ax = plt.subplots(figsize=(5, 4))
