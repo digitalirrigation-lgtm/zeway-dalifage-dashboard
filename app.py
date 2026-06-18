@@ -27,7 +27,7 @@ translations = {
         "title": "🛰️ የዲጂታል መስኖ መረጃ ማዕከል - ዳሊፋጌ እርሻ",
         "subtitle": "የአዋሽ ተፋሰስ መስመር ክትትል - መጋጠሚያዎች: 10.6254, 40.3154",
         "et_title": "💧 ዕለታዊ እና ሳምንታዊ የውሃ ትነት (Evapotranspiration) መገለጫ",
-        "et_evap": "ዕለታዊ የአፈር ውሃ ትነት ማጣት:",
+        "et_evap": "ዕለታዊ የአፈርውሃ ትነት ማጣት:",
         "et_need": "የሰብሉ የተጣራ የውሃ ፍላጎት መጠን:",
         "map_title": "🗺️ የቀጥታ የካርታ ዞን: የሰብል ውሃ ይዘት መከታተያ",
         "legend_healthy": "🔷 ሰማያዊ ዞን: በቂ የውሃ ክምችት ያለው አፈር (ጥሩ)",
@@ -76,7 +76,7 @@ with m_col3:
 
 st.markdown("---")
 
-# 2. BRAND NEW DESIGN: SIDE-BY-SIDE GRAPHIC ELEMENTS (PIE CHART + MAP)
+# 2. DESIGN: SIDE-BY-SIDE GRAPHIC ELEMENTS (PIE CHART + MAP)
 layout_col1, layout_col2 = st.columns(2)
 
 with layout_col1:
@@ -115,7 +115,7 @@ with data_col1:
     
     weekly_matrix = {
         "Day of Week": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "Air Temp (°C)":,
+        "Air Temp (°C)": [34, 36, 35, 33, 34, 37, 35],
         "Soil ET Loss (mm)": [7.1, 7.4, 6.9, 7.2, 7.5, 7.1, 6.8],
         "Irrigation Dose Rate": ["65 mins", "70 mins", "65 mins", "65 mins", "75 mins", "65 mins", "60 mins"]
     }
