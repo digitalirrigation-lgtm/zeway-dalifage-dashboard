@@ -1,5 +1,5 @@
 streamlit
-earthengine-api
 folium
 streamlit-folium
 matplotlib
+earthengine-api
